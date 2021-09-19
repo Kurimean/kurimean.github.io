@@ -20,7 +20,7 @@
   <meta name="author" content="Kurimean">
   <meta name="keywords" content="">
   
-  <title>Hello World - Kurimean的小站</title>
+  <title>给我女朋友的一份计算机学习笔记 01：Python类型转换 - Kurimean的小站</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Hello World">
+            <span class="h2" id="subtitle" title="给我女朋友的一份计算机学习笔记 01：Python类型转换">
               
             </span>
 
@@ -207,8 +207,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-08-15 21:26" pubdate>
-        2021年8月15日 晚上
+      <time datetime="2021-09-19 13:11" pubdate>
+        2021年9月19日 下午
       </time>
     </span>
   
@@ -219,7 +219,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      5 字
+      520 字
     </span>
   
 
@@ -229,7 +229,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      6
        分钟
     </span>
   
@@ -259,16 +259,48 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">给我女朋友的一份计算机学习笔记 01：Python类型转换</h1>
             
             <div class="markdown-body">
-              <p>Welcome to Kurimean’s blog!</p>
+              <p><em><strong>前言：由于我家的小包（对女友的爱称）在学习“Introduction to Computer Science”这门课程中遇到了些许问题，经常来找我询问这方面的知识，而三言两语又不一定讲得清楚，故写篇小笔记方便让小包更好理解（虽然是大姐姐但是意外的有点笨呢），同时也算是给博客添点新东西。</strong></em></p>
+<h2 id="一、Python中的类型"><a href="#一、Python中的类型" class="headerlink" title="一、Python中的类型"></a>一、Python中的类型</h2><h3 id="Python3-中有六个标准的数据类型："><a href="#Python3-中有六个标准的数据类型：" class="headerlink" title="Python3 中有六个标准的数据类型："></a>Python3 中有六个标准的数据类型：</h3><ul>
+<li>Number（数字）：包括int（整型），complex（复数），float（浮点型）</li>
+<li>String（字符串）</li>
+<li>List（列表）</li>
+<li>Tuple（元组）</li>
+<li>Set（集合）</li>
+<li>Dictionary（字典）</li>
+</ul>
+<h5 id="虽然说有六个标准类型，但是现在课程中一般使用的只有Number中的int、float、complex还有string这四个，故先写这四个的转换，剩下几个等学到or有时间再写"><a href="#虽然说有六个标准类型，但是现在课程中一般使用的只有Number中的int、float、complex还有string这四个，故先写这四个的转换，剩下几个等学到or有时间再写" class="headerlink" title="虽然说有六个标准类型，但是现在课程中一般使用的只有Number中的int、float、complex还有string这四个，故先写这四个的转换，剩下几个等学到or有时间再写"></a>虽然说有六个标准类型，但是现在课程中一般使用的只有Number中的int、float、complex还有string这四个，故先写这四个的转换，剩下几个等学到or有时间再写</h5><h2 id="二、转换方式"><a href="#二、转换方式" class="headerlink" title="二、转换方式"></a>二、转换方式</h2><h3 id="int"><a href="#int" class="headerlink" title="int"></a>int</h3><h5 id="int-gt-float-自动添加一位小数。"><a href="#int-gt-float-自动添加一位小数。" class="headerlink" title="int -&gt; float: 自动添加一位小数。"></a>int -&gt; float: 自动添加一位小数。</h5><p><code>float(114514)        #    114514.0</code></p>
+<h5 id="int-gt-complex-自动添加虚数部分，以0j表示。"><a href="#int-gt-complex-自动添加虚数部分，以0j表示。" class="headerlink" title="int -&gt; complex: 自动添加虚数部分，以0j表示。"></a>int -&gt; complex: 自动添加虚数部分，以<code>0j</code>表示。</h5><p><code>complex(114514)        #    114514+0j</code></p>
+<h5 id="int-gt-str-直接转换，类型变更。"><a href="#int-gt-str-直接转换，类型变更。" class="headerlink" title="int -&gt; str: 直接转换，类型变更。"></a>int -&gt; str: 直接转换，类型变更。</h5><p><code>str(114514)        #    114514</code></p>
+<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><h5 id="float-gt-int-自动去掉小数点后面的数值。"><a href="#float-gt-int-自动去掉小数点后面的数值。" class="headerlink" title="float -&gt; int: 自动去掉小数点后面的数值。"></a>float -&gt; int: 自动去掉小数点后面的数值。</h5><p><code>int(114514.81)        #    114514</code></p>
+<h5 id="float-gt-complex-自动添加虚数部分，以0j表示。"><a href="#float-gt-complex-自动添加虚数部分，以0j表示。" class="headerlink" title="float -&gt; complex: 自动添加虚数部分，以0j表示。"></a>float -&gt; complex: 自动添加虚数部分，以<code>0j</code>表示。</h5><p><code>complex(114514.81)        #    114514.81+0j</code></p>
+<h5 id="float-gt-str：抹掉小数部分的末位处的0。"><a href="#float-gt-str：抹掉小数部分的末位处的0。" class="headerlink" title="float -&gt; str：抹掉小数部分的末位处的0。"></a>float -&gt; str：抹掉小数部分的末位处的0。</h5><p><code>str(114514.810)        #    114514.81</code></p>
+<h3 id="complex"><a href="#complex" class="headerlink" title="complex"></a>complex</h3><h5 id="complex-gt-str-转换为标准表达式（形如x-zj-然后再转换为字符串。"><a href="#complex-gt-str-转换为标准表达式（形如x-zj-然后再转换为字符串。" class="headerlink" title="complex -&gt; str: 转换为标准表达式（形如x+zj),然后再转换为字符串。"></a>complex -&gt; str: 转换为标准表达式（形如<code>x+zj</code>),然后再转换为字符串。</h5><p><code>str(complex(114514+81j))        #    (114514+81j)</code><br><code>str(complex(114514,81))        #    (114514+81j)</code></p>
+<h3 id="str"><a href="#str" class="headerlink" title="str"></a>str</h3><h5 id="str-gt-int-直接转换（注意：当字符串中有数字及正负号以外的字符时，会报错）"><a href="#str-gt-int-直接转换（注意：当字符串中有数字及正负号以外的字符时，会报错）" class="headerlink" title="str -&gt; int :直接转换（注意：当字符串中有数字及正负号以外的字符时，会报错）"></a>str -&gt; int :直接转换（注意：当字符串中有数字及正负号以外的字符时，会报错）</h5><p><code>int(&#39;114514&#39;)    #    114514</code></p>
+<h5 id="str-gt-float-直接转换（注意：当字符串中有数字及正负号以外的字符时，会报错）"><a href="#str-gt-float-直接转换（注意：当字符串中有数字及正负号以外的字符时，会报错）" class="headerlink" title="str -&gt; float :直接转换（注意：当字符串中有数字及正负号以外的字符时，会报错）"></a>str -&gt; float :直接转换（注意：当字符串中有数字及正负号以外的字符时，会报错）</h5><p><code>float(&#39;114514&#39;)    #    114514.0</code></p>
+<h5 id="str-gt-complex：若能转换为-int-或-float，则会转换后再转为-complex。如果字符串为复数的标准表达式，会直接转换为complex。"><a href="#str-gt-complex：若能转换为-int-或-float，则会转换后再转为-complex。如果字符串为复数的标准表达式，会直接转换为complex。" class="headerlink" title="str -&gt; complex：若能转换为 int 或 float，则会转换后再转为 complex。如果字符串为复数的标准表达式，会直接转换为complex。"></a>str -&gt; complex：若能转换为 int 或 float，则会转换后再转为 complex。如果字符串为复数的标准表达式，会直接转换为complex。</h5><p><code>complex(&#39;114514&#39;)    #    (114514+0j)</code><br><code>complex(&#39;114514.81&#39;)       #    (114514.81+0j)</code><br><code>complex(&#39;114514.810&#39;)        #    (114514.81+0j)</code><br><code>complex(&#39;114514+81j&#39;)       # (114514+81j)</code><br><code>complex(&#39;(114514+81j)&#39;)     # (114514+81j)</code><br><code>complex(&#39;114514 + 81j&#39;)      # 报错，加号两侧不可有空格</code></p>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/CSLearning/">CSLearning</a>
+                    
+                  </div>
                 
               </div>
               
@@ -283,15 +315,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/19/ForGF01/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">给我女朋友的一份计算机学习笔记 01：Python类型转换</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/08/15/hello-world/">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
